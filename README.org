@@ -1,0 +1,83 @@
+#+title: Mythos
+#+description:  black ho(ard)le
+#+created: [2023-07-15 Sat 17:21]
+#+last_modified: [2023-09-17 Sun 18:38]
+
+* Description
+This is an attempt to build a solid groundwork for my setup. This avoid the
+hassle of doing it all over again.
+
+The idea is that with a handful of command I can easily reproduce what I've
+already done manually. This avoid forgetting and struggling to do it all over again.
+
+** Structure
+- galaxy_roles
+
+  Roles available at [[https://galaxy.ansible.com/home][Ansible Galaxy]]. This folder is download when you invoke the
+  ~make requirements~ command.
+
+- group_vars
+
+  This is where you define the ansible variables used in the ansible roles. Your
+  filename should match the src_ini{[name]} used in your ~hosts.ini~ file.
+
+- roles
+
+  This is where you put your homebrew made roles.
+
+- vars
+
+  This is where you put your secret vault.
+
+- .vault_password.gpg
+
+  Where your vault's password is stored.
+
+- ansible.cfg
+
+  Local ansible settings.
+
+- hosts
+
+  Where you put the ip you want to reach with ansible. This is called your
+  ~Inventory~ in the ~Ansible~ documentation.
+
+- makefile
+
+  quick ansible command
+
+- requirements.yaml
+
+  All roles used for this repository.
+
+- run.yaml
+
+  what roles will be run by ansible.
+
+* Installation
+
+- Download this repo:
+
+  : git clone https://github.com/Eldwinster/mythos
+
+- In the repository folder use this command to download the ansible roles from
+  Ansible Galaxy:
+
+  : make reqs
+
+- Look for the makefile's examples
+
+* Sources
+- [[https://perfectmediaserver.com/][Index - Perfect Media Server]]
+
+  The 2016, 2017, and 2019 were what start this humble project.
+
+- [[https://github.com/ironicbadger/infra][GitHub - ironicbadger/infra: 99.9% less leaked credentials]]
+
+  What I used as a template. I advised to look for older commits as they are
+  easier to understand at first.
+
+* Backups :ignore:
+* Restore :ignore:
+* see config.org :ignore:
+For more detail go there ->

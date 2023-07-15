@@ -1,0 +1,16 @@
+roles:
+- src: ironicbadger.docker_compose_generator
+- src: ironicbadger.bash_aliases
+- src: ironicbadger.hddtemp
+- src: ironicbadger.snapraid
+
+- src: geerlingguy.docker
+- src: geerlingguy.docker_arm
+- src: geerlingguy.security
+- src: geerlingguy.ntp
+- src: geerlingguy.github-users
+
+- src: grog.package
+- src: weareinteractive.environment
+
+- src: https://github.com/IronicBadger/ansible-users
